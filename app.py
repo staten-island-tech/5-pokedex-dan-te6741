@@ -15,9 +15,23 @@ data = json.load(pokedex)
 
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on typ
 
-
-for id, data  in enumerate(data):
-     print (id, ":", data["name"])
-
+# challenge 1:
+# for id, data  in enumerate(data):
+#      print (id, ":", data["name"])
+# challenge 2:
+# lang = input("Select language: english, japanese, chinese, or french")
+# for bla in data:
+#     print (bla["name"][lang])
+# challenge 3:
+lang = input("Select language: english, japanese, chinese, or french")
+type = input("Select pokemon type")
+print(type, "types:")
+for poke in data:
+    if type in poke["type"]:
+        print (poke["name"][lang])
+    else:
+        print("No Pokemon of that type found or invalid imput")
+        break
+     
 
 
