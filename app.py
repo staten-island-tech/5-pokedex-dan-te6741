@@ -23,15 +23,25 @@ data = json.load(pokedex)
 # for bla in data:
 #     print (bla["name"][lang])
 # challenge 3:
-lang = input("Select language: english, japanese, chinese, or french")
-type = input("Select pokemon type")
-print(type, "types:")
+# lang = input("Select language: english, japanese, chinese, or french")
+# type = input("Select pokemon type")
+# print(type, "types:")
+# for poke in data:
+#     if type in poke["type"]:
+#         print (poke["name"][lang])
+#     else:
+#         print("No Pokemon of that type found or invalid imput")
+#         break
+# challenge 4
+usin = input("Type pokemon keyword here.. (Ex: Cosm for Cosmog, Cosmoem )")
+lang = ["english"]
+pokelist = []
 for poke in data:
-    if type in poke["type"]:
-        print (poke["name"][lang])
-    else:
-        print("No Pokemon of that type found or invalid imput")
-        break
-     
+    if usin  in (poke["name"][lang]):
+        list.insert(poke)
+
+print(pokelist)
+
+
 
 
