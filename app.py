@@ -34,13 +34,12 @@ data = json.load(pokedex)
 #         break
 # challenge 4
 usin = input("Type pokemon keyword here.. (Ex: Cosm for Cosmog, Cosmoem )")
-lang = ["english"]
 pokelist = []
 for poke in data:
-    if usin  in (poke["name"][lang]):
-        list.insert(poke)
+    if usin  in (poke["name"]["english"]):
+        pokelist.append(poke["name"]["english"])
 
-print(pokelist)
+print(pokelist) 
 
 
 
